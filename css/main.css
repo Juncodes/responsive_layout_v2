@@ -1,91 +1,115 @@
-*{
-	font-family: 'PT Sans', sans-serif;
-}
+/**************************************
+		MAIN STYLES -- MOBILE
+**************************************/
 
-/* Default*/
-html{
-	height: 100%;
-	max-width: 100%;
-	margin: 0 auto;
-	padding: 0;
-}
-.contact, footer, .wrapper {
-	text-align: center;
-}
-#mainnav {
-	text-transform: uppercase;
-	list-style: none;	
-	margin: 0 auto;
-}
-#mainnav a {
-	text-decoration: none;
-	text-align: center;
-}
-#mainnav a:hover {
-	color: red;
+.self-intro,
+.drawing,
+header,
+#contact-container {
 	background-color: #f3f3f3;
 }
-p.intro {
-	color: #8f8d8d;
-	margin: 0 auto;
-	text-align: left;
+.nav,
+#main-header {
+	display: flex;
+	flex-direction: column;
 }
-img.ppic {
-    height: auto; 
-    width: auto; 
-    max-width: 300px; 
-    max-height: 300px;
-    padding: 10px;
-}
-div.wrapper, div.contact {
-	background-color: #f3f3f3;
-}
-
-.contact h4 {
-	font-size: 1.3em;
-	padding-top: 70px;
-	padding-bottom: 15px;	
-}
-.contact p {
-	max-width: 85%;
-	margin: 0 auto;
-	padding-bottom: 15px;
-}
-.contact ul {
-	margin-bottom: 0px;
-}
-.contact ul li{
+#jc {
 	text-align: center;
-	list-style: none;
-	padding: 10px 0 10px 0;
 	margin: 0 auto;
+	padding-top: 1em;
 }
-.contact ul a {
+.nav a {
+	text-align: center;
+	margin-top: 2em;
+	border-bottom: 1px solid #ddd;
 	text-decoration: none;
-	color: #8f8d8d;
+	color: grey;
+	display: block;
 }
-
-.contact ul a:hover {
-	color: red;
+.nav a:hover {
+	color: #0abab5;
+	border-bottom-color: #0abab5;
+	transition: 0.7s;
 }
-
-h3.portfolio {
-	text-align: center;	
-	font-size: 2em;
+.drawing { 
+    max-height: 350px;
+    max-width: 350px;
+	display: block;
+    padding: 1em;
+    margin: 0 auto;
 }
-.footer-container {
-	border-top: solid;
-	border-top-width: 1px;
-	border-color: #b9b9b9;
-	width: 100%;
+.intro,
+.port {
+	text-align: center;
+	display: block;
 }
-footer ul li a {
+.intro {
+	padding-bottom: 1em;
+	padding: 20px 50px 30px 50px;
+}
+.port {
+	font-size: 1.5em;
+	font-weight: 700;
+}
+.projects img {
+	max-height: 95%;
+	max-width: 95%;
+	display: block;
+	margin: 0 auto;
+	padding: 5px;	
+}
+.projects h4, .projects p{
+	text-align: center;
+	padding: 0 20px 0 20px;
+}
+.projects h4 {
+	font-size: 1.145em;
+}
+#contact-container {
+	text-align: center;
+	padding: 50px;
+}
+.contact-info a {
 	text-decoration: none;
 	color: black;
 }
-footer ul li a:hover {
-	color: red;
+.contact-info a:hover {
+	color: #0abab5;
 }
+#mobile-only {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	text-align: center;
+}
+.backtop,
+.jun {
+	margin: 0;
+	padding: 30px 20px 30px 20px; /* footer spacing */
+}
+.backtop a {
+	text-decoration: none;
+	color: black;
+}
+.backtop a:hover{
+	color: #0abab5;
+}
+
+
+
+/****************************************
+		NONE MOBILE DISPLAY -- OFF
+****************************************/
+
+#none-mobile {
+	display: none;
+}
+
+/****************************************
+				CLEARFIX
+****************************************/
+	
+	
 .clearfix:after {
 	visibility: hidden;
 	display: block;
@@ -93,268 +117,115 @@ footer ul li a:hover {
 	content: " ";
 	clear: both;
 	height: 0;
-}
-/*        MOBILE         */
+	}
 
-@media (min-width: 320px) and (max-width: 767px){
-	div.wrapper {
-		padding: 10px;
+/***************************************
+				MEDIA QUERY
+***************************************/
+
+@media screen and (min-width: 768px) {
+	#jc {
+		font-size: 50px;
 	}
-	#mainnav h1 {
-		margin: 0 auto;
+	.nav {
+		flex-direction: row;
+		justify-content: space-between;
+		text-align: center;
+		padding: 20px 20% 30px 20%;
 	}
-	#mainnav ul {
-		list-style: none;
-		padding: 2px;	
-		margin: 0 auto;
+	.nav a {
+		border-bottom-color: transparent;
 	}
-	#mainnav a {
-		padding-top: 10px;
-		padding-bottom: 10px;
-		margin: 10px 0 5px 0;
-		background-color: #fff;
+	.drawing {
+		float: right;
+		height: 200px;
+		width: 350px;
+	}
+	.intro {
+		margin-top: 0;
+		padding: 50px 40px 0 20px;
+		text-align: left;
+		max-width: 50%;
+	}
+	.projects li {
+		float: left;
 		display: block;
-		color: black;
+		max-width: 50%;
 	}
-	
-	img.ppic {
-		text-align: center;
+	#none-mobile {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
 	}
-	
-	.container ul li h4 {
-		text-align: center;
-		margin: 0 auto;
-		max-width: 85%;
-		padding: 20px 0 20px 0;
-		font-size: 1.5em;
+	.right,
+	.left {
+		padding-bottom: 40px;
 	}
-	.container ul li p {
-		text-align: center;
-		max-width: 85%;
-		margin: 0 auto;
-		padding-bottom: 10px;
-		color: #8f8d8d;
+	.right li {
+		float: left;
+		padding: 30px 10px 30px 0px; /* footer spacing */
 	}
-	.container p.calc {
-		padding-bottom: 70px;
-	}
-	
-	p.intro {
-		max-width: 85%;
-		padding: 30px 0 30px 0;
-		text-align: center;
-	}	
-	h3.portfolio {
-		text-align: center;
-		font-size: 2em;
-	}
-	.container ul li img {
-		max-height: 95%;
-		max-width: 95%;
-		display: block;
-		margin: 0 auto;
-		padding: 5px;
-	}
-	
-	.contact {
-		text-align: center;
-	}
-	
-	footer {
-		position: absolute;
-	}
-	footer ul li.backtop {
-		list-style: none;
-	}
-	footer ul li a {
+	.right a {
 		text-decoration: none;
 		color: black;
+		margin-left: .65em;
+		margin-right: .65em;
 	}
-	
-	footer h3.jun {
-		display: inline-block;
-		position: relative;
-		right: 30%;
-	
+	.right a:hover {
+		color: #0abab5;
+		transition: 0.7s;
 	}
-	footer ul{
-		display: inline-block;
-		text-decoration: none;
-		color: black;
-		position: relative;
-		left: 30%;
+	.left {
+		margin-right: auto;
 	}
-	.none-mobile{
+	#mobile-only {
 		display: none;
 	}
-
-} /* media query end bracket */
-
-/*       TABLET DEVICES       */
-@media (min-width: 768px) and (max-width: 1024px){
-
-	#mainnav h1 {
-		text-align: center;
-		margin: 0 auto;
-		
-	}
-	#mainnav ul {
-		list-style: none;
-		padding: 2px;
-	}
-	
-	#mainnav ul li {
-		float: left;
-		text-align: center;
-		width: 33.33%;
-	}
-	
-	#mainnav a {
-		padding: 10px 0 10px 0;
-		margin: 0 auto;
-		background-color: #fff;
-		color: black;
-		display: block;
-	}
-	#mainnav a:hover {
-		color: red;
-		background-color: #f3f3f3;
-	}
-	img.ppic {
-		float: right;
-	}
-	p.intro {
-		max-width: 45%;
-		float: left;
-		margin: 80px 0 0 50px;
-	}	
-	.container ul li {
-		text-align: center;
-		float: left;
-		display: block;
-		max-width: 47%;
-		margin: 0 auto;
-		padding: 11px;
-	}
-	
-	.container ul li img {
-		max-width: 100%;
-	}
-	
-	/* setting footer  */
-	
-	footer {
-		position: absolute;
-	}
-	
-	.mobile-only {
-		display: none;	
-	}
-	
-	.none-mobile ul  {
-		text-decoration: none;
-		color: black;
-	}
-	.right li {
-		float: right;
-		padding: 10px;
-		position: relative;
-		display: inline-block;
-	}
-	
-	.left li {
-		float: left;
-		padding: 10px;
-		display: inline-block;
-	}
-
 }
 
-@media (min-width: 1025px){
-	#mainnav h1 {
-		float: left;
-		display: inline-block; 
-		width: 20%;
-		
+
+@media screen and (min-width: 1024px) {
+	 #main-header {
+		flex-direction: row;
 	}
-	#mainnav ul {
-		list-style: none;
-		display: block;
-		text-align: right;
-		margin: 0 auto;
+	#jc{
+		margin: 0;
+		padding-left: 5%;
 	}
-	
-	#mainnav ul li {
-		float: left;
-		position: relative;
-		display: block;
-		left: 55%;
-		padding: 0 10px 0 10px;
+	.nav {
+		margin-left: auto;
+		padding: 30px;
 	}
-	
-	#mainnav a {
-		text-decoration: none;
-		padding: 10px 0 10px 0;
-		color: black;
-		display: inline-block;
+	.nav li {
+		margin-right: 20px;
 	}
-	img{
+	.self-intro {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+	.intro {
+		padding-left: 5%;
+	}
+	.drawing {
 		float: right;
-		clear: both;
+		height: 250px;
+		width: 450px;
 	}
-	p.intro {
-		max-width: 45%;
+		.projects li {
 		float: left;
-		text-align: left;
-		margin: 2em;
-	}	
-	h3.portfolio {
-		font-size: 2em;
+		display: block;
+		max-width: 33.33%;
+	}
+	.contact-para {
 		text-align: center;
-		clear: both;
-		margin: 1em 0 1em 0;	
-	}
-	.container ul li {
-		float: left;
-		display: inline-block;
-		max-width: 30%;
-		padding-left: 28px;
-		text-align: center;
-	}
-	.container ul li img {
-		max-width: 100%;
-		text-align: center;
-	}
-	.contact {
-		text-align: center;
-	}
-	
-	/* setting footer  */
-	
-	
-	footer {
-		position: absolute;
-	}
-	
-	.mobile-only {
-		display: none;	
-	}
-	
-	.none-mobile ul  {
-		text-decoration: none;
-		color: black;
-	}
-	.right li {
-		float: right;
-		padding: 10px;
-		right: 10%;
-		display: inline-block;
-	}
-	
-	.left li {
-		float: left;
-		padding: 10px;
-		display: inline-block;
 	}
 }
-	
+
+
+
+
+
+
+
+
+
