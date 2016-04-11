@@ -8,7 +8,7 @@ header,
 #contact-container {
 	background-color: #f3f3f3;
 }
-.nav,
+#nav,
 #main-header {
 	display: flex;
 	flex-direction: column;
@@ -18,7 +18,7 @@ header,
 	margin: 0 auto;
 	padding-top: 1em;
 }
-.nav a {
+#nav a {
 	text-align: center;
 	margin-top: 2em;
 	border-bottom: 1px solid #ddd;
@@ -26,7 +26,7 @@ header,
 	color: grey;
 	display: block;
 }
-.nav a:hover {
+#nav a:hover {
 	color: #0abab5;
 	border-bottom-color: #0abab5;
 	transition: 0.7s;
@@ -39,7 +39,7 @@ header,
     margin: 0 auto;
 }
 .intro,
-.port {
+#port {
 	text-align: center;
 	display: block;
 }
@@ -47,7 +47,7 @@ header,
 	padding-bottom: 1em;
 	padding: 20px 50px 30px 50px;
 }
-.port {
+#port {
 	font-size: 1.5em;
 	font-weight: 700;
 }
@@ -93,6 +93,7 @@ header,
 }
 .backtop a:hover{
 	color: #0abab5;
+	transition: 0.7s;
 }
 
 
@@ -127,13 +128,13 @@ header,
 	#jc {
 		font-size: 50px;
 	}
-	.nav {
+	#nav {
 		flex-direction: row;
 		justify-content: space-between;
 		text-align: center;
 		padding: 20px 20% 30px 20%;
 	}
-	.nav a {
+	#nav a {
 		border-bottom-color: transparent;
 	}
 	.drawing {
@@ -192,11 +193,11 @@ header,
 		margin: 0;
 		padding-left: 5%;
 	}
-	.nav {
+	#nav {
 		margin-left: auto;
 		padding: 30px;
 	}
-	.nav li {
+	#nav li {
 		margin-right: 20px;
 	}
 	.self-intro {
@@ -208,10 +209,10 @@ header,
 	}
 	.drawing {
 		float: right;
-		height: 250px;
-		width: 450px;
+		max-height: 100%;
+		max-width: 100%;
 	}
-		.projects li {
+	.projects li {
 		float: left;
 		display: block;
 		max-width: 33.33%;
